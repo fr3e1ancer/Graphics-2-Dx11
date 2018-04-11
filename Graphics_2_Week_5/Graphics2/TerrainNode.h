@@ -10,12 +10,13 @@ class TerrainNode : public SceneNode
 	};
 
 public:
-	TerrainNode();
-
+	TerrainNode(wstring name, wstring heightMap) : SceneNode(name) { _heightMapFile = heightMap; }
 	bool Initialise();
-	void GeneratePolygons();
+	void GenerateVertsAndIndices();
 	void CreateBuffers();
 	void BuildTextures();
 	void GenerateBlendMap();
+private:
+	wstring _heightMapFile;
 };
 
