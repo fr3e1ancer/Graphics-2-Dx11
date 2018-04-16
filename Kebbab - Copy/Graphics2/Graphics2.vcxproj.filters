@@ -91,6 +91,9 @@
     <Image Include="white.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="rollinghills.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework.cpp">
@@ -129,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="shader.hlsl">
+      <Filter>Shader Files</Filter>
+    </FxCompile>
+    <FxCompile Include="TerrainShader.hlsl">
+      <Filter>Shader Files</Filter>
+    </FxCompile>
+    <FxCompile Include="TexturedShaders.hlsl">
       <Filter>Shader Files</Filter>
     </FxCompile>
   </ItemGroup>

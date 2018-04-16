@@ -29,7 +29,6 @@ void CubeNode::Render()
 
 	// Update the constant buffer 
 	DirectXFramework::GetDXFramework()->GetDeviceContext()->VSSetConstantBuffers(0, 1, _constantBuffer.GetAddressOf());
-	_constantBuffer.GetAddressOf();
 	DirectXFramework::GetDXFramework()->GetDeviceContext()->UpdateSubresource(_constantBuffer.Get(), 0, 0, &_cBuffer, 0, 0);
 
 	// Set the texture to be used by the pixel shader

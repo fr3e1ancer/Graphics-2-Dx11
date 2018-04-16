@@ -2,6 +2,7 @@
 #include "DirectXFramework.h"
 #include "CubeNode.h"
 #include "MeshNode.h"
+#include "TerrainNode.h"
 
 class Graphics2 : public DirectXFramework
 {
