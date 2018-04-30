@@ -1,6 +1,7 @@
 #pragma once
 #include "SceneNode.h"
 #include "DirectXFramework.h"
+#include "DDSTextureLoader.h"
 #include <vector>
 #include <fstream>
 
@@ -11,7 +12,7 @@ class TerrainNode : public SceneNode
 		XMFLOAT3 Position;
 		XMFLOAT3 Normal;
 		XMFLOAT2 TexCoord;
-		XMFLOAT4 BlendMapTexCoord;
+		XMFLOAT2 BlendMapTexCoord;
 	};
 
 	struct CBUFFER
@@ -35,12 +36,15 @@ public:
 	void Shutdown();
 	bool LoadHeightMap(wstring heightMapFilename);
 	void GenerateVertsAndIndices();
+	void GenerateNormals();
+	XMVECTOR CalculateNormals(XMFLOAT3 v0, XMFLOAT3 v1, XMFLOAT3 v2);
 	void BuildGeometryBuffers();
 	void BuildShaders();
 	void BuildVertexLayout();
 	void BuildConstantBuffers();
 	void BuildTextures();
 	void BuildRenderStates();
+	void LoadTerrainTextures();
 	void GenerateBlendMap();
 private:
 	wstring _heightMapFile;
@@ -59,6 +63,8 @@ private:
 
 	//Texture Variables
 	ComPtr<ID3D11ShaderResourceView>			_texture;
+	ComPtr<ID3D11ShaderResourceView> _texturesResourceView;
+	ComPtr<ID3D11ShaderResourceView> _blendMapResourceView;
 
 	//Rasteriser States
 	ComPtr<ID3D11RasterizerState>				_defaultRasteriserState;

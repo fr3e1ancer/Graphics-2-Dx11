@@ -22,7 +22,7 @@ void Graphics2::CreateSceneGraph()
 	sceneGraph->Add(lArm);
 	sceneGraph->Add(rArm);*/
 
-	shared_ptr<TerrainNode> terrain = make_shared<TerrainNode>(L"Terrain1", L"rollinghills.bmp");
+	shared_ptr<TerrainNode> terrain = make_shared<TerrainNode>(L"Terrain1", L"rollinghills8.raw");
 	shared_ptr<MeshNode> node = make_shared<MeshNode>(L"Plane1", L"airplane.x");
 	sceneGraph->Add(terrain);
 	sceneGraph->Add(node);

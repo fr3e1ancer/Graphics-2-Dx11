@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Core.h" />
     <ClInclude Include="CubeNode.h" />
+    <ClInclude Include="DDSTextureLoader.h" />
     <ClInclude Include="DirectXCore.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="DirectXFramework.h" />
@@ -178,7 +179,11 @@
     <Image Include="woodbox.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlendedTerrain.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CubeNode.cpp" />
+    <ClCompile Include="DDSTextureLoader.cpp" />
     <ClCompile Include="Framework.cpp" />
     <ClCompile Include="DirectXFramework.cpp" />
     <ClCompile Include="Graphics2.cpp" />
@@ -187,6 +192,7 @@
     <ClCompile Include="MeshRenderer.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="SceneGraph.cpp" />
+    <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="TerrainNode.cpp" />
     <ClCompile Include="WICTextureLoader.cpp" />
   </ItemGroup>
@@ -219,7 +225,8 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="F:\CGP Year 2\Semester 2\Graphics 2\TerrainTextures\rollinghills.raw" />
+    <None Include="rollinghills.raw" />
+    <None Include="rollinghills8.raw" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

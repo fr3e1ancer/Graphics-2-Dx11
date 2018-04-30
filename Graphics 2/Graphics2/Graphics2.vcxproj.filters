@@ -72,6 +72,9 @@
     <ClInclude Include="TerrainNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Graphics2.rc">
@@ -132,6 +135,15 @@
     <ClCompile Include="TerrainNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SceneNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlendedTerrain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="shader.hlsl">
@@ -145,7 +157,10 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="F:\CGP Year 2\Semester 2\Graphics 2\TerrainTextures\rollinghills.raw">
+    <None Include="rollinghills.raw">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rollinghills8.raw">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
